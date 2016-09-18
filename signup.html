@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>178</title>
+	<link href="style/stylesheets/signup.css" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+<body dir='ltr' class='body-signup'>
+	<div class="container">
+		<h1>服 务 178</h1>
+		<p>178网络科技公司</p>
+		<form action='' method="post" class='validate-signup'>
+			<div class="signAndLog">
+				<a href='login.html'  class='changeColor'>登录</a >
+				<span class="dot">·</span>
+				<a href='signup.html'  class='changeColor default'>注册</a >
+			</div>
+			<div class="input-signup">
+				<span class='icon'></span>
+				<input type="text" name="phoneEmailName" placeholder="企业名称" class='loginMes'/>
+			</div>
+			<div class="input-signup inputPassword-signup">
+				<span class='icon'></span>
+				<input type="password" name="password" placeholder="请输入密码" min='3' maxlength='16' class='loginMes' id='password'/>
+			</div>
+			<div class="error_container-signup"></div>
+			<div class="input-signup inputPasswordAgain">
+				<span class='icon'></span>
+				<input type="password" name="confirm_password" placeholder="请再次输入密码" min='3' maxlength='16' class='loginMes'/>
+			</div>
+			<div class="error_container-signup"></div>
+			<div class="inputPhone">
+				<span class='icon'></span>
+				<input type="text" name="phone" placeholder="手机号码" class='loginMes' maxlength="11" />
+			</div>
+			<div class="error_container-signup"></div>
+			<div class='identification'>
+				<div class="identify">
+					<input type="text" name="confirm_message" placeholder="短信验证码" class='loginMes' maxlength="6" />
+				</div>
+				<div class="getMessage">
+					<input type="submit" value='发送至手机' />
+				</div>
+			</div>
+		</form>
+		<div class="knowAndforget-signup">
+			<label><input type="checkbox" name="阅读并接受" value="">阅读并接受</label>
+			<a href="#" >178网络科技公司协议</a>
+		</div>
+		<div class="login-signup">
+			<input type="submit" value='注 册'>
+		</div>
+	</div>
+	<script type="text/javascript" src='scripts/jquery-2.2.1.min.js'></script>
+	<script type='text/javascript' src='scripts/jquery.validate.js'></script>
+	<script type='text/javascript' src='scripts/messages_zh.js'></script>
+	<script type="text/javascript" src='scripts/loginAndsignup.js'></script>
+</body>
+</html>
