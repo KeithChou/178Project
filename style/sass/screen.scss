@@ -1,0 +1,165 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "normalize","compass";
+
+
+html{
+	height:100%;
+}
+
+body{
+}
+
+.main{
+	width:100%;
+	font-family:'Microsoft YaHei';
+	margin-bottom:70px;
+	@extend html;
+	@include box-sizing();
+	@include display-flex();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+}
+
+
+.header{
+	width: 100%;
+	background-color:#f9f9f9;
+	margin-bottom:20px;
+	@include order(1);
+}
+
+.header-content{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:6px;
+	@include display-flex();
+	@include align-items(center);
+}
+
+.logo{
+	&::before{
+		content:url('../images/logo.png');
+	}
+}
+
+.space{
+	@include flex(1);
+}
+
+.message{
+	.signup{
+		display:inline-block;
+		width:73px;
+		height:40px;
+		text-align:center;
+		color:#fff;
+		text-decoration: none;
+		font-size: 1.2em;
+		line-height:40px;
+		margin-right:14px;
+		background-color:#E65C5A;
+		@include border-radius(5px);
+		@include transition('background-color' 1s ease 0);
+		&:hover{
+			background-color:#EA3B39;
+		}
+	}
+	.login{
+		font-size:1em;
+		color:#777;
+		text-decoration:none;
+		@include transition('font-weight' 1s ease 0);
+		@include transition('color' 1s ease 0);
+		&:hover{
+			font-weight:bold;
+			color:#000;
+		}
+	}
+}
+
+
+.content{
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
+	@include display-flex();
+	@include flex(1);
+	@include order(2);
+	@include justify-content(center);
+	@include align-items(center);
+}
+
+.con-info{
+	display:inline-block;
+	margin-right:8%;
+	@include order(1);
+	h1{
+		font-size:3em;
+	}
+	p{
+		color:#79808C;
+		margin-bottom:6%;
+	}
+	a{
+		display:inline-block;
+		background-color:#53A2FF;
+		line-height:50px;
+		text-align:center;
+		min-height:50px;
+		min-width:200px;
+		font-size:1.2em;
+		font-weight: 500;
+		color:#fff;
+		text-decoration:none;
+		@include border-radius(5px);
+		@include transition('background-color' 1s ease 0);
+		&:hover{
+			background-color: #3994FF;
+		}
+	}
+}
+
+.ads{
+	@include order(2);
+	width:340px;
+	height:550px;
+}
+.footer{
+	width:100%;
+	background-color:#111111;
+	color:#777;
+	font-size:0.8em;
+	padding:10px 0;
+	@include order(3);
+	text-align:center;
+}
+.foo-container{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	@include display-flex();
+	@include flex-flow(row nowrap);
+	@include justify-content(space-around);
+	.other{
+		color:#999;
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	.icon{
+		&::before{
+			content:url('../images/sir.png');
+			width:20px;
+			height:20px;
+			position:relative;
+			top:4px;
+			right:3px;
+		}
+	}
+}

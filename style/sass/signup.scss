@@ -1,0 +1,328 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "normalize","compass";
+
+
+
+html{
+	height:100%;
+	width:100%;
+}
+
+
+%body{
+  	font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;;
+	width:100%;
+	background-color:#F2F2F2;
+	@include display-flex();
+	@include flex-direction(column);
+	@include flex-wrap(nowrap);
+	@include align-items(center);
+	@include box-sizing();
+	@extend html;
+}
+
+.body-signup{
+	@extend %body;
+	padding-top:2%;
+}
+
+.body-login{
+	@extend %body;
+	padding-top:5%;
+}
+%color{
+	background-color:#45ADFC;
+}
+
+.container{
+	width:80%;
+	height:100%;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	@include flex(1);
+	h1{
+		font-weight:normal;
+		font-size:3.8em;
+		color:#E65C5A;
+		margin-bottom:-0.1em;
+	}
+	p{
+		color:#E65C5A;
+		font-size:2.0em;
+	}
+}
+
+.signAndLog{
+	padding-top:5px;
+	color:#B1B1B1;
+	font-weight: bold;
+	margin-bottom:20px;
+	.dot{
+		margin:0 10px;
+	}
+	.changeColor{
+		color:#B1B1B1;
+		text-decoration: none;
+		@include transition('color' 1s ease 0);
+		&:hover{
+			color:#717171;
+		}
+	}
+	.default{
+		color:#555;
+	}
+}
+
+%flexbox{
+	@include display-flex();
+	@include justify-content(center);
+	@include flex-direction(row);
+	@include flex-wrap(nowrap);
+}
+
+%inputHeight{
+	height:35px;
+}
+%inputLineHeight{
+	line-height:35px;
+}
+.input{
+	@extend %flexbox;
+	.icon{
+		display: inline-block;
+		width:40px;
+		@extend %inputHeight;
+		border:1px solid #ccc;
+		@extend %inputLineHeight;
+		margin-right:-1px;
+		background-color:#fff;
+		@include border-radius(5px 0 0 5px);
+		&::before{
+			content:url('../images/home.png');
+		}
+	}
+	input{
+		width:200px;
+		@extend %inputHeight;
+		border:1px solid #ccc;
+		margin-left:-5px;
+		padding:0 0 0 4px;
+		@include border-radius(0 5px 5px 0);
+	}
+}
+
+.input-signup{
+	@extend .input;
+	.con{
+		padding-right:2px;
+	}
+}
+
+
+.inputPhone{
+	@extend .input-signup;
+	margin-bottom:10px;
+	.icon{
+		&::before{
+			content:url('../images/mobile.png');
+		}
+	}
+	@extend %validate;
+}
+
+%validate{
+	label.error{
+		position:absolute;
+		margin-top:8px;
+		margin-left:5px;
+		color:red;
+		font-size:0.8em;
+	}
+}
+.inputPassword{
+	@extend .input;
+	margin:10px 0 0;
+	.icon{
+		&::before{
+			content:url('../images/Passwordicon.png');
+		}
+	}
+	label.error{
+		position:absolute;
+		margin-left:4px;
+		font-size:0.8em;
+		color:red;
+	}
+}
+.inputPassword-signup{
+	@extend .input-signup;
+	margin:10px 0 ;
+	.icon{
+		&::before{
+			content:url('../images/password.png');
+		}
+	}
+	@extend %validate;
+}
+
+.inputPasswordAgain{
+	@extend .input-signup;
+	margin-bottom:10px;
+	.icon{
+		&::before{
+			content:url('../images/review.png');
+		}
+	}
+	@extend %validate;
+}
+
+%message{
+	label.error{
+		position:absolute;
+		margin-top:8px;
+		margin-left:120px;
+		color:red;
+		font-size:0.8em;
+	}
+}
+.identify{
+	margin-bottom:10px;
+	margin-right:10px;
+	display:inline-block;
+	input{
+		@extend %inputHeight;
+		@extend %inputLineHeight;
+		width:105px;
+		@include border-radius(5px);
+		padding:0 0 0 5px;
+		border:1px solid #ccc;
+	}
+	@extend %message;
+
+}
+.getMessage{
+	display:inline-block;
+	input{
+		font-size:0.8em;
+		color:#fff;
+		text-decoration:none;
+		border:1px solid #87B87F;
+		width:110px;
+		@include border-radius(5px);
+		@extend %inputLineHeight;
+		@extend %inputHeight;
+		background-color: #87B87F;
+		@include transition('background-color' 1s ease 0);
+		@include transition('border-color' 1s ease 0);
+		&:hover{
+			background-color:#93D18B;
+			border-color:#93D18B;
+		}
+	}
+}
+
+.login{
+	@extend %flexbox;
+	input{
+		width:250px;
+		height:44px;
+		line-height:44px;
+		font-size:1.2em;
+		color:#fff;
+		border:1px solid #049CDB;
+		margin-bottom:10px;
+		text-decoration:none;
+		@include border-radius(5px);
+		@include transition('background-color' 1s ease 0);
+		@include transition('border-color' 1s ease 0);
+		background-color: #049CDB;
+		&:hover{
+			background-color:#05AFF7;
+			border-color:#05AFF7;
+		}
+	}
+}
+
+.login-signup{
+	@extend %flexbox;
+	input{
+		width:250px;
+		@extend %inputHeight;
+		@extend %inputLineHeight;
+		font-size:1.2em;
+		border:1px solid #49BE38;
+		color:#fff;
+		margin-bottom:10px;
+		text-decoration:none;
+		@include border-radius(5px);
+		@include transition('background-color' 1s ease 0);
+		@include transition('border-color' 1s ease 0);
+		background-color: #49BE38;
+		&:hover{
+			border-color:#6BD95B;
+			background-color:#6BD95B;
+		}
+	}
+}
+
+.knowAndforget{
+	label{
+		font-size:0.8em;
+		color:#555;
+		margin-right:80px;
+	}
+	input{
+		position:absolute;
+		margin-left:-18px;
+		margin-top:3px;
+	}
+	a{
+		color:#555;
+		font-size:0.8em;
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+}
+
+
+
+.knowAndforget-signup{
+	margin-bottom:10px;
+	label{
+		font-size:0.8em;
+		color:#555;
+	}
+	input{
+		position:absolute;
+		margin-left:-18px;
+		margin-top:3px;
+	}
+	a{
+		color:#39A6F5;
+		font-size:0.8em;
+		text-decoration:none;
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+}
+
+.error_container{
+	margin-bottom:10px;
+	font-size:0.8em;
+	color:red;
+	display:inline-block;
+}
+
+.error_container-signup{
+	margin:-10px 0 20px;
+	font-size:0.8em;
+	color:red;
+}
