@@ -281,11 +281,11 @@ html, .body-signup, .body-login {
   width: 100%;
 }
 
-/* line 16, ../sass/signup.scss */
+/* line 18, ../sass/signup.scss */
 .body-signup, .body-login {
   font-family: "Arial","Microsoft YaHei","榛戜綋","瀹嬩綋",sans-serif;
   width: 100%;
-  background-color: #F2F2F2;
+  background: url("../images/background-1.png") scroll no-repeat 0 0;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
@@ -299,17 +299,17 @@ html, .body-signup, .body-login {
   box-sizing: border-box;
 }
 
-/* line 28, ../sass/signup.scss */
+/* line 30, ../sass/signup.scss */
 .body-signup {
   padding-top: 2%;
 }
 
-/* line 33, ../sass/signup.scss */
+/* line 35, ../sass/signup.scss */
 .body-login {
   padding-top: 5%;
 }
 
-/* line 41, ../sass/signup.scss */
+/* line 43, ../sass/signup.scss */
 .container {
   width: 80%;
   height: 100%;
@@ -319,31 +319,31 @@ html, .body-signup, .body-login {
   -webkit-flex: 1;
   flex: 1;
 }
-/* line 48, ../sass/signup.scss */
+/* line 50, ../sass/signup.scss */
 .container h1 {
   font-weight: normal;
   font-size: 3.8em;
   color: #E65C5A;
   margin-bottom: -0.1em;
 }
-/* line 54, ../sass/signup.scss */
+/* line 56, ../sass/signup.scss */
 .container p {
   color: #E65C5A;
   font-size: 2.0em;
 }
 
-/* line 60, ../sass/signup.scss */
+/* line 62, ../sass/signup.scss */
 .signAndLog {
   padding-top: 5px;
   color: #B1B1B1;
   font-weight: bold;
   margin-bottom: 20px;
 }
-/* line 65, ../sass/signup.scss */
+/* line 67, ../sass/signup.scss */
 .signAndLog .dot {
   margin: 0 10px;
 }
-/* line 68, ../sass/signup.scss */
+/* line 70, ../sass/signup.scss */
 .signAndLog .changeColor {
   color: #B1B1B1;
   text-decoration: none;
@@ -352,17 +352,17 @@ html, .body-signup, .body-login {
   -webkit-transition: "color" 1s 0;
   transition: "color" 1s 0;
 }
-/* line 72, ../sass/signup.scss */
+/* line 74, ../sass/signup.scss */
 .signAndLog .changeColor:hover {
   color: #717171;
 }
-/* line 76, ../sass/signup.scss */
+/* line 78, ../sass/signup.scss */
 .signAndLog .default {
   color: #555;
 }
 
-/* line 81, ../sass/signup.scss */
-.input, .input-signup, .inputPhone, .inputPassword-signup, .inputPasswordAgain, .inputPassword, .login, .login-signup {
+/* line 83, ../sass/signup.scss */
+.input, .input-signup, .inputPhone, .inputPassword-signup, .inputPasswordAgain, .inputPassword, .identification, .login, .login-signup {
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
@@ -373,17 +373,17 @@ html, .body-signup, .body-login {
   flex-wrap: nowrap;
 }
 
-/* line 88, ../sass/signup.scss */
+/* line 90, ../sass/signup.scss */
 .input .icon, .input-signup .icon, .inputPhone .icon, .inputPassword-signup .icon, .inputPasswordAgain .icon, .inputPassword .icon, .input input, .input-signup input, .inputPhone input, .inputPassword-signup input, .inputPasswordAgain input, .inputPassword input, .identify input, .getMessage input, .login-signup input {
   height: 35px;
 }
 
-/* line 91, ../sass/signup.scss */
+/* line 93, ../sass/signup.scss */
 .input .icon, .input-signup .icon, .inputPhone .icon, .inputPassword-signup .icon, .inputPasswordAgain .icon, .inputPassword .icon, .identify input, .getMessage input, .login-signup input {
   line-height: 35px;
 }
 
-/* line 96, ../sass/signup.scss */
+/* line 98, ../sass/signup.scss */
 .input .icon, .input-signup .icon, .inputPhone .icon, .inputPassword-signup .icon, .inputPasswordAgain .icon, .inputPassword .icon {
   display: inline-block;
   width: 40px;
@@ -394,11 +394,11 @@ html, .body-signup, .body-login {
   -webkit-border-radius: 5px;
   border-radius: 5px 0 0 5px;
 }
-/* line 105, ../sass/signup.scss */
+/* line 107, ../sass/signup.scss */
 .input .icon::before, .input-signup .icon::before, .inputPhone .icon::before, .inputPassword-signup .icon::before, .inputPasswordAgain .icon::before, .inputPassword .icon::before {
-  content: url("../images/home.png");
+  content: url("../images/Loginicon.png");
 }
-/* line 109, ../sass/signup.scss */
+/* line 111, ../sass/signup.scss */
 .input input, .input-signup input, .inputPhone input, .inputPassword-signup input, .inputPasswordAgain input, .inputPassword input {
   width: 200px;
   border: 1px solid #ccc;
@@ -409,21 +409,25 @@ html, .body-signup, .body-login {
   border-radius: 0 5px 5px 0;
 }
 
-/* line 121, ../sass/signup.scss */
-.input-signup .con, .inputPhone .con, .inputPassword-signup .con, .inputPasswordAgain .con {
+/* line 123, ../sass/signup.scss */
+.input-signup .icon, .inputPhone .icon, .inputPassword-signup .icon, .inputPasswordAgain .icon {
   padding-right: 2px;
 }
+/* line 125, ../sass/signup.scss */
+.input-signup .icon::before, .inputPhone .icon::before, .inputPassword-signup .icon::before, .inputPasswordAgain .icon::before {
+  content: url("../images/home.png");
+}
 
-/* line 127, ../sass/signup.scss */
+/* line 132, ../sass/signup.scss */
 .inputPhone {
   margin-bottom: 10px;
 }
-/* line 131, ../sass/signup.scss */
+/* line 136, ../sass/signup.scss */
 .inputPhone .icon::before {
   content: url("../images/mobile.png");
 }
 
-/* line 139, ../sass/signup.scss */
+/* line 144, ../sass/signup.scss */
 .inputPhone label.error, .inputPassword-signup label.error, .inputPasswordAgain label.error {
   position: absolute;
   margin-top: 8px;
@@ -432,15 +436,15 @@ html, .body-signup, .body-login {
   font-size: 0.8em;
 }
 
-/* line 147, ../sass/signup.scss */
+/* line 152, ../sass/signup.scss */
 .inputPassword {
   margin: 10px 0 0;
 }
-/* line 151, ../sass/signup.scss */
+/* line 156, ../sass/signup.scss */
 .inputPassword .icon::before {
   content: url("../images/Passwordicon.png");
 }
-/* line 155, ../sass/signup.scss */
+/* line 160, ../sass/signup.scss */
 .inputPassword label.error {
   position: absolute;
   margin-left: 4px;
@@ -448,25 +452,25 @@ html, .body-signup, .body-login {
   color: red;
 }
 
-/* line 162, ../sass/signup.scss */
+/* line 167, ../sass/signup.scss */
 .inputPassword-signup {
   margin: 10px 0;
 }
-/* line 166, ../sass/signup.scss */
+/* line 171, ../sass/signup.scss */
 .inputPassword-signup .icon::before {
   content: url("../images/password.png");
 }
 
-/* line 173, ../sass/signup.scss */
+/* line 178, ../sass/signup.scss */
 .inputPasswordAgain {
   margin-bottom: 10px;
 }
-/* line 177, ../sass/signup.scss */
+/* line 182, ../sass/signup.scss */
 .inputPasswordAgain .icon::before {
   content: url("../images/review.png");
 }
 
-/* line 185, ../sass/signup.scss */
+/* line 190, ../sass/signup.scss */
 .identify label.error {
   position: absolute;
   margin-top: 8px;
@@ -475,13 +479,13 @@ html, .body-signup, .body-login {
   font-size: 0.8em;
 }
 
-/* line 193, ../sass/signup.scss */
+/* line 202, ../sass/signup.scss */
 .identify {
   margin-bottom: 10px;
   margin-right: 10px;
   display: inline-block;
 }
-/* line 197, ../sass/signup.scss */
+/* line 206, ../sass/signup.scss */
 .identify input {
   width: 105px;
   -moz-border-radius: 5px;
@@ -491,11 +495,11 @@ html, .body-signup, .body-login {
   border: 1px solid #ccc;
 }
 
-/* line 208, ../sass/signup.scss */
+/* line 217, ../sass/signup.scss */
 .getMessage {
   display: inline-block;
 }
-/* line 210, ../sass/signup.scss */
+/* line 219, ../sass/signup.scss */
 .getMessage input {
   font-size: 0.8em;
   color: #fff;
@@ -515,13 +519,13 @@ html, .body-signup, .body-login {
   -webkit-transition: "border-color" 1s 0;
   transition: "border-color" 1s 0;
 }
-/* line 222, ../sass/signup.scss */
+/* line 231, ../sass/signup.scss */
 .getMessage input:hover {
   background-color: #93D18B;
   border-color: #93D18B;
 }
 
-/* line 231, ../sass/signup.scss */
+/* line 240, ../sass/signup.scss */
 .login input {
   width: 250px;
   height: 44px;
@@ -544,13 +548,13 @@ html, .body-signup, .body-login {
   transition: "border-color" 1s 0;
   background-color: #049CDB;
 }
-/* line 244, ../sass/signup.scss */
+/* line 253, ../sass/signup.scss */
 .login input:hover {
   background-color: #05AFF7;
   border-color: #05AFF7;
 }
 
-/* line 253, ../sass/signup.scss */
+/* line 262, ../sass/signup.scss */
 .login-signup input {
   width: 250px;
   font-size: 1.2em;
@@ -571,62 +575,62 @@ html, .body-signup, .body-login {
   transition: "border-color" 1s 0;
   background-color: #49BE38;
 }
-/* line 266, ../sass/signup.scss */
+/* line 275, ../sass/signup.scss */
 .login-signup input:hover {
   border-color: #6BD95B;
   background-color: #6BD95B;
 }
 
-/* line 274, ../sass/signup.scss */
+/* line 283, ../sass/signup.scss */
 .knowAndforget label {
   font-size: 0.8em;
   color: #555;
   margin-right: 80px;
 }
-/* line 279, ../sass/signup.scss */
+/* line 288, ../sass/signup.scss */
 .knowAndforget input {
   position: absolute;
   margin-left: -18px;
   margin-top: 3px;
 }
-/* line 284, ../sass/signup.scss */
+/* line 293, ../sass/signup.scss */
 .knowAndforget a {
   color: #555;
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 288, ../sass/signup.scss */
+/* line 297, ../sass/signup.scss */
 .knowAndforget a:hover {
   text-decoration: underline;
 }
 
-/* line 296, ../sass/signup.scss */
+/* line 305, ../sass/signup.scss */
 .knowAndforget-signup {
   margin-bottom: 10px;
 }
-/* line 298, ../sass/signup.scss */
+/* line 307, ../sass/signup.scss */
 .knowAndforget-signup label {
   font-size: 0.8em;
   color: #555;
 }
-/* line 302, ../sass/signup.scss */
+/* line 311, ../sass/signup.scss */
 .knowAndforget-signup input {
   position: absolute;
   margin-left: -18px;
   margin-top: 3px;
 }
-/* line 307, ../sass/signup.scss */
+/* line 316, ../sass/signup.scss */
 .knowAndforget-signup a {
   color: #39A6F5;
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 311, ../sass/signup.scss */
+/* line 320, ../sass/signup.scss */
 .knowAndforget-signup a:hover {
   text-decoration: underline;
 }
 
-/* line 317, ../sass/signup.scss */
+/* line 326, ../sass/signup.scss */
 .error_container {
   margin-bottom: 10px;
   font-size: 0.8em;
@@ -634,7 +638,7 @@ html, .body-signup, .body-login {
   display: inline-block;
 }
 
-/* line 324, ../sass/signup.scss */
+/* line 333, ../sass/signup.scss */
 .error_container-signup {
   margin: -10px 0 20px;
   font-size: 0.8em;

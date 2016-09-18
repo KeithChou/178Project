@@ -13,10 +13,12 @@ html{
 }
 
 
+
+
 %body{
   	font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;;
 	width:100%;
-	background-color:#F2F2F2;
+	background:url('../images/background-1.png') scroll no-repeat 0 0 ;
 	@include display-flex();
 	@include flex-direction(column);
 	@include flex-wrap(nowrap);
@@ -103,7 +105,7 @@ html{
 		background-color:#fff;
 		@include border-radius(5px 0 0 5px);
 		&::before{
-			content:url('../images/home.png');
+			content:url('../images/Loginicon.png');
 		}
 	}
 	input{
@@ -118,8 +120,11 @@ html{
 
 .input-signup{
 	@extend .input;
-	.con{
+	.icon{
 		padding-right:2px;
+		&::before{
+			content:url('../images/home.png');
+		}
 	}
 }
 
@@ -189,6 +194,10 @@ html{
 		color:red;
 		font-size:0.8em;
 	}
+}
+
+.identification{
+	@extend %flexbox;
 }
 .identify{
 	margin-bottom:10px;
